@@ -1,0 +1,83 @@
+<html>
+<title>Reporte Desencriptado</title>
+<h1><b><center><head>Reporte Desencriptado</head></center></b></h1>
+<body style="background-color: F0E68C;">
+<p>Hora del reporte: 23:03:37.557</p>
+<p>Fecha del reporte: 2021-02-13</p>
+<p>Nuestra matriz C con el mensaje encriptado es la siguiente: </p>
+<h3>Matriz C:</h3>
+<center>
+<table border="8" style="background-color: #E6E6FA;">
+<tr>
+<td>29</td><td>-129</td><td>11</td><td>-62</td><td>26</td><td>-55</td><td>37</td><td>50</td><td>17</td><td>-53</td><td>-49</td><td>-13</td><td>14</td></tr>
+<tr>
+<td>147</td><td>74</td><td>173</td><td>109</td><td>108</td><td>1</td><td>137</td><td>225</td><td>122</td><td>55</td><td>118</td><td>35</td><td>178</td></tr>
+<tr>
+<td>166</td><td>253</td><td>183</td><td>158</td><td>187</td><td>140</td><td>-242</td><td>-97</td><td>-141</td><td>377</td><td>272</td><td>169</td><td>218</td></tr>
+</table>
+</center>
+<p>A esta matriz le restamos la matriz B y nos queda:</p>
+<h3>Matriz C-B:</h3>
+<center>
+<table border="8" style="background-color: #E6E6FA;">
+<tr>
+<td>29</td><td>-107</td><td>10</td><td>-50</td><td>53</td><td>-21</td><td>36</td><td>55</td><td>7</td><td>-21</td><td>-13</td><td>24</td><td>45</td></tr>
+<tr>
+<td>97</td><td>105</td><td>197</td><td>158</td><td>78</td><td>31</td><td>148</td><td>201</td><td>118</td><td>100</td><td>140</td><td>77</td><td>198</td></tr>
+<tr>
+<td>210</td><td>242</td><td>143</td><td>176</td><td>147</td><td>102</td><td>-228</td><td>-56</td><td>-167</td><td>327</td><td>247</td><td>145</td><td>171</td></tr>
+</table>
+</center>
+<p>Ahora debemos calcular la matriz Inversa de A</p>
+<p>Para esto usaremos el metodo de Gauss </p>
+<p>Debemos poner la matriz A y a la derecha una matriz identidad de la siguiente forma</p>
+<h3>Armando metodo de Gauss para calcular inversa de A:</h3>
+<center>
+<table border="8" style="background-color: #E6E6FA;">
+<tr>
+<td>1.0</td><td>-5.0</td><td>6.0</td><td>1.0</td><td>0.0</td><td>0.0</td></tr>
+<tr>
+<td>5.0</td><td>3.0</td><td>1.0</td><td>0.0</td><td>1.0</td><td>0.0</td></tr>
+<tr>
+<td>-10.0</td><td>10.0</td><td>3.0</td><td>0.0</td><td>0.0</td><td>1.0</td></tr>
+</table>
+</center>
+<p>Al resolver por Gauss a manera que la matriz identidad nos quede al lado izquierdo: </p>
+<center>
+<table border="8" style="background-color: #E6E6FA;">
+<tr>
+<td>1.0</td><td>0.0</td><td>0.0</td><td>-0.0016556291390728423</td><td>0.12417218543046357</td><td>-0.03807947019867549</td></tr>
+<tr>
+<td>0.0</td><td>1.0</td><td>0.0</td><td>-0.04139072847682121</td><td>0.1043046357615894</td><td>0.04801324503311259</td></tr>
+<tr>
+<td>0.0</td><td>0.0</td><td>1.0</td><td>0.1324503311258278</td><td>0.0662251655629139</td><td>0.04635761589403974</td></tr>
+</table>
+</center>
+<p>Ahora la matriz que quedo al lado derecho de la matriz identidad es nuestra matriz Inversa de A: </p>
+<h3>Matriz Inversa de A:</h3>
+<center>
+<table border="8" style="background-color: #E6E6FA;">
+<tr>
+<td>-0.0016556291390728423</td><td>0.12417218543046357</td><td>-0.03807947019867549</td></tr>
+<tr>
+<td>-0.04139072847682121</td><td>0.1043046357615894</td><td>0.04801324503311259</td></tr>
+<tr>
+<td>0.1324503311258278</td><td>0.0662251655629139</td><td>0.04635761589403974</td></tr>
+</table>
+</center>
+<p>Luego se debe multiplicar la matriz Inversa de A con la matriz C-B y nos da la matriz MD que tiene nuestro mensaje decifrado aun en numeros: </p>
+<h3>Matriz MD:</h3>
+<center>
+<table border="8" style="background-color: #E6E6FA;">
+<tr>
+<td>4</td><td>4</td><td>19</td><td>13</td><td>4</td><td>0</td><td>27</td><td>27</td><td>21</td><td>0</td><td>8</td><td>4</td><td>18</td></tr>
+<tr>
+<td>19</td><td>27</td><td>27</td><td>27</td><td>13</td><td>9</td><td>3</td><td>16</td><td>4</td><td>27</td><td>27</td><td>14</td><td>27</td></tr>
+<tr>
+<td>20</td><td>4</td><td>21</td><td>12</td><td>19</td><td>4</td><td>4</td><td>18</td><td>1</td><td>19</td><td>19</td><td>15</td><td>27</td></tr>
+</table>
+</center>
+<p>Nuestro mensaje Descifrado es:</p>
+<p>ESTE ES UN MENSAJE DE PRUEBA SI SEÑOR</p>
+</body>
+</html>
